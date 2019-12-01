@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import styles from './login.module.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Form, Button } from 'react-bootstrap';
+import { Link, Route, withRouter } from 'react-router-dom';
 
 
 class Login extends Component {
@@ -48,8 +49,8 @@ class Login extends Component {
                     </Form.Group>
 
                     <Button variant="primary" type="submit">
-                        Login
-          </Button>
+                        <Link to="/chat"><p>Sign up to login</p></Link>
+                    </Button>
                 </Form>
             </div>
         );

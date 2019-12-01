@@ -5,6 +5,7 @@ import { Link, Route, withRouter } from 'react-router-dom';
 import LoginPage from './LoginPage'
 import ChatPage from './ChatPage'
 import RoomPage from './RoomPage'
+import UserPage from './UserPage'
 
 class App extends Component {
   render() {
@@ -14,15 +15,16 @@ class App extends Component {
         <header className={styles.header}>
           <div className={styles.box}>
             <Link to="/"><div className={styles.boxleft}>Chat App</div></Link>
-            <div className={styles.boxright}>
+            {/* <div className={styles.boxright}>
               <Link to="/"><p className={location.pathname === "/" ? styles.selected : null}>HOME</p></Link>
               <Link to="/chat"><p className={location.pathname === "/chat" ? styles.selected : null} >CHAT</p></Link>
               <Link to="/room"><p className={location.pathname === "/room" ? styles.selected : null} >ROOM</p></Link>
-            </div>
+            </div> */}
           </div>
         </header>
         <section className={styles.content}>
-          <Route path="/" exact component={LoginPage} />
+          <Route path="/" exact component={UserPage} />
+          <Route path="/login" exact component={LoginPage} />
           <Route path="/chat" exact component={ChatPage} />
           <Route path="/room" exact component={RoomPage} />
         </section>
