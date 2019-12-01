@@ -1,0 +1,38 @@
+.wrap {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: rgb(247, 248, 244);
+  justify-content: space-between;
+  .dialog {
+    background-color: rgb(242, 243, 177);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 800px;
+    width: 80%;
+    padding: 20px 20px 10px 10px;
+    // margin: 50px 50px 50px 50px;
+    border: {
+      style: solid;
+      width: 5px;
+      color: rgb(236, 223, 38);
+    }
+    .section {
+      height: 90%;
+      border: {
+        style: solid;
+        width: 5px;
+        color: rgb(222, 245, 248);
+      }
+    }
+    .footer {
+      height: 6%;
+      border: {
+        style: solid;
+        width: 5px;
+        color: rgb(222, 245, 248);
+      }
+    }
+  }
+}

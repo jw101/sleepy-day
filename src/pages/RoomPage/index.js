@@ -2,5 +2,5 @@
 import React, { Component } from 'react';
 
 export default () =>{
-    return <div>这里是作品详情页</div>
+    return <div>这里是room界面</div>
 }
