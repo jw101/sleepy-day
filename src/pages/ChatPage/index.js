@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import styles from './chat.module.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { InputGroup, FormControl, Button, Badge, ButtonToolbar } from 'react-bootstrap';
+import { Link, Route, withRouter } from 'react-router-dom';
 
 class Chat extends Component {
     render() {
@@ -20,19 +21,16 @@ class Chat extends Component {
                         </h5>
                         <p>&nbsp;&nbsp;&nbsp;</p>
                         <ButtonToolbar>
-                            <Button variant="primary">Dark</Button>
+                            <Button variant="primary"><Link to="/login"><p>Add Room</p></Link></Button>
                             <p>&nbsp;&nbsp;&nbsp;</p>
-                            <Button variant="secondary">Light</Button>
-                            <p>&nbsp;&nbsp;&nbsp;</p>
-                            <Button variant="success">Invite friend</Button>
+                            <Button variant="secondary">Delete Room</Button>
                             <p>&nbsp;&nbsp;&nbsp;</p>
                             <Button variant="warning">Add friend</Button>
-                            <p>&nbsp;&nbsp;&nbsp;</p>
-                            <Button variant="danger">Change Room</Button>
                             <p>&nbsp;&nbsp;&nbsp;</p>
                             <Button variant="info">Edit name</Button>
                         </ButtonToolbar>
                         <p>&nbsp;&nbsp;&nbsp;</p>
+                        {/* <button> &nbsp; Add Room &nbsp;</button> */}
                     </div>
                     <section className={styles.section}>
                         111
@@ -40,12 +38,15 @@ class Chat extends Component {
                     <header className={styles.footer}>
                         <InputGroup className="mb-3">
                             <FormControl
-                                placeholder="Recipient's username"
-                                aria-label="Recipient's username"
+                                placeholder="Input message"
+                                aria-label="Input message"
                                 aria-describedby="basic-addon2"
                             />
                             <InputGroup.Append>
-                                <Button variant="outline-secondary">Button</Button>
+                                <Button variant="outline-secondary">Send</Button>
+                            </InputGroup.Append>
+                            <InputGroup.Append>
+                                <Button variant="outline-secondary">Send to All</Button>
                             </InputGroup.Append>
                         </InputGroup>
                     </header>
