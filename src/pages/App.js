@@ -5,6 +5,7 @@ import LoginPage from './LoginPage'
 import ChatPage from './ChatPage'
 import RoomPage from './RoomPage'
 import UserPage from './UserPage'
+import AddRoomPage from './AddRoomPage'
 
 class App extends Component {
   render() {
@@ -26,6 +27,7 @@ class App extends Component {
           <Route path="/login" exact component={LoginPage} />
           <Route path="/chat" exact component={ChatPage} />
           <Route path="/room" exact component={RoomPage} />
+          <Route path="/addRoom" exact component={AddRoomPage} />
         </section>
         <footer className={styles.footer}>
           <p>© <b>Game Sleepy Day</b></p>

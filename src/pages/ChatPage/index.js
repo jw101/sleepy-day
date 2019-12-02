@@ -21,7 +21,7 @@ class Chat extends Component {
                         </h5>
                         <p>&nbsp;&nbsp;&nbsp;</p>
                         <ButtonToolbar>
-                            <Button variant="primary"><Link to="/login"><p>Add Room</p></Link></Button>
+                            <Link to="/addRoom"><Button variant="primary">Add Room</Button></Link>
                             <p>&nbsp;&nbsp;&nbsp;</p>
                             <Button variant="secondary">Delete Room</Button>
                             <p>&nbsp;&nbsp;&nbsp;</p>

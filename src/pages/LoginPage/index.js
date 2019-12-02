@@ -47,10 +47,11 @@ class Login extends Component {
                             <option>5</option>
                         </Form.Control>
                     </Form.Group>
-
-                    <Button variant="primary" type="submit">
-                        <Link to="/chat"><p>Sign up to login</p></Link>
-                    </Button>
+                    <Link to="/chat">
+                        <Button variant="primary" type="submit">
+                            Sign up to login
+                        </Button>
+                    </Link>
                 </Form>
             </div>
         );

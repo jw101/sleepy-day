@@ -6,13 +6,13 @@ import { Form, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 
-class Login extends Component {
+class AddRoom extends Component {
     render() {
         return (
             <div className={styles.wrap}>
                 <Form>
                     <Form.Group controlId="formBasicEmail">
-                        <Form.Label>Username</Form.Label>
+                        <Form.Label>Roomname</Form.Label>
                         <Form.Control type="email" placeholder="Enter email" />
                         <Form.Text className="text-muted">
                             We'll never share your email with anyone else.
@@ -58,4 +58,4 @@ class Login extends Component {
 
 }
 
-export default Login;
+export default AddRoom;

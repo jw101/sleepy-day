@@ -17,10 +17,11 @@ class User extends Component {
                             Enter your user name to login to your account.
                         </Form.Text>
                     </Form.Group>
-
-                    <Button variant="primary" type="submit">
-                        <Link to="/login"><p>Login</p></Link>
-                    </Button>
+                    <Link to="/login">
+                        <Button variant="primary" type="submit">
+                            Login
+                        </Button>
+                    </Link>
                 </Form>
             </div>
         );
