@@ -20,18 +20,12 @@ class User extends Component {
     //     }));
     // }
 
-    sendMessage = (data) => {
-        const { ws } = this.props; // websocket instance passed as props to the child component.
-        // console.log('ws: ' + ws);
-        try {
-            ws.send(data) // send data to the server
-        } catch (error) {
-            // console.log("----------error");
-            // console.log(error) // catch error
-        }
-        // let {msg} = this.props;
-        // console.log('msg: ' + msg);
-        // console.log('msg json: ' + msg.data);
+    login = () => {
+        this.props.changeUserName(this.state.username);
+        this.props.sendMessage(JSON.stringify({
+            type: "login",
+            username: this.state.username
+        }));
     };
 
     render() {
@@ -52,7 +46,7 @@ class User extends Component {
                         </Form.Text>
                     </Form.Group>
                     <Link to="/login">
-                        <Button variant="primary" type="submit" onClick={() => { this.props.changeUserName(this.state.username) }}>
+                        <Button variant="primary" type="submit" onClick={this.login}>
                             Login
                         </Button>
                     </Link>

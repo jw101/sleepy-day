@@ -7,6 +7,10 @@ import { Link } from 'react-router-dom';
 import roomData from '../rooms.json';
 
 class Chat extends Component {
+    componentDidMount() {
+        console.log(this.props.msg);
+    }
+
     render() {
         console.log(roomData.joinedList);
         return (
