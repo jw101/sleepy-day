@@ -43,9 +43,9 @@ class App extends Component {
             //     console.log(error) // catch error
             // }
         }
-        let {msg} = this.props;
+        // let {msg} = this.props;
         // console.log('msg: ' + msg);
-        console.log('msg json: ' + msg);
+        // console.log('msg json: ' + JSON.parse(msg).data);
     };
 
     /**

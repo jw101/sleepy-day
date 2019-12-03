@@ -8,6 +8,7 @@ import roomData from '../rooms.json';
 
 class Chat extends Component {
     componentDidMount() {
+        console.log('--msg--');
         console.log(this.props.msg);
     }
 
