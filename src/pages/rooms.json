@@ -307,10 +307,67 @@
                 ]
             },
             "messages": []
+        },
+        {
+            "name": "Seattle chatroom",
+            "members": [
+                {
+                    "name": "benjamin2",
+                    "password": "",
+                    "profile": {
+                        "age": 20,
+                        "location": "Dallas",
+                        "school": "Rice"
+                    }
+                },
+                {
+                    "name": "benjamin2",
+                    "password": "",
+                    "profile": {
+                        "age": 20,
+                        "location": "Dallas",
+                        "school": "Rice"
+                    }
+                },
+                {
+                    "name": "benjamin2",
+                    "password": "",
+                    "profile": {
+                        "age": 20,
+                        "location": "Dallas",
+                        "school": "Rice"
+                    }
+                }
+            ],
+            "owner": {
+                "name": "benjamin2",
+                "password": "",
+                "profile": {
+                    "age": 20,
+                    "location": "Dallas",
+                    "school": "Rice"
+                }
+            },
+            "requirement": {
+                "minAge": 16,
+                "maxAge": 27,
+                "locations": [
+                    "Dallas",
+                    "Houston",
+                    "Irvine"
+                ],
+                "schools": [
+                    "Rice",
+                    "UT-Austin",
+                    "USC",
+                    "NEU"
+                ]
+            },
+            "messages": []
         }
     ],
     "userCurrentRoom": {
-        "name": "rice chatroom",
+        "name": "current chatroom",
         "members": [
             {
                 "name": "benjamin1",
