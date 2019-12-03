@@ -14,7 +14,8 @@ class App extends Component {
 
         this.state = {
             ws: null,
-            msg: ''
+            msg: '',
+            username: ''
         };
     }
 
@@ -22,6 +23,10 @@ class App extends Component {
     componentDidMount() {
         this.connect();
     }
+
+    changeUserName = (newUserName) => {
+        this.setState({username: newUserName});
+    };
 
     /**
      * @function connect
@@ -44,7 +49,7 @@ class App extends Component {
 
         ws.onmessage = (msg) => {
             this.check();
-            console.log("get message from backend by websocket");
+            // console.log("get message from backend by websocket");
 
             this.setState({msg: msg});
         };
@@ -100,8 +105,8 @@ class App extends Component {
                     </div>
                 </header>
                 <section className={styles.content}>
-                    <Route path="/" exact component={() => <UserPage ws={this.state.ws} msg={this.state.msg}/>}/>
-                    <Route path="/login" exact component={LoginPage}/>
+                    <Route path="/" exact component={() => <UserPage ws={this.state.ws} msg={this.state.msg} changeUserName={this.changeUserName.bind(this)}/>}/>
+                    <Route path="/login" exact component={() => <LoginPage ws={this.state.ws} msg={this.state.msg} username={this.state.username}/>}/>
                     <Route path="/chat" exact component={ChatPage}/>
                     <Route path="/room" exact component={RoomPage}/>
                     <Route path="/addRoom" exact component={AddRoomPage}/>
