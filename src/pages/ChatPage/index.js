@@ -10,7 +10,21 @@ class Chat extends Component {
         return (
             <div className={styles.wrap}>
                 <div className={styles.left}>
-                    <h1>Room</h1>
+                    <section className={styles.up}>
+                        <h5>
+                            <Badge variant="secondary">Current Room</Badge>
+                        </h5>
+                    </section>
+                    <section className={styles.down}>
+                        <h5>
+                            <Badge variant="secondary">Joined Room</Badge>
+                        </h5>
+                    </section>
+                    <section className={styles.down}>
+                        <h5>
+                            <Badge variant="secondary">Available Room</Badge>
+                        </h5>
+                    </section>
                 </div>
 
                 <div className={styles.dialog}>
@@ -51,7 +65,7 @@ class Chat extends Component {
                         </InputGroup>
                     </header>
                 </div>
-                <div class={styles.right}>
+                <div className={styles.right}>
                     222
                 </div>
             </div>

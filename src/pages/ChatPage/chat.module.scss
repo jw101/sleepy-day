@@ -5,8 +5,40 @@
   background-color: rgb(247, 248, 244);
   justify-content: flex-start;
   .left {
+    display: flex;
+    flex-direction: column;
     width: 15%;
     background-color: rgb(223, 232, 245);
+    .up {
+      display: flex;
+      height: 10%;
+      background-color: rgb(230, 238, 124);
+      border: {
+        style: solid;
+        width: 5px;
+        color: rgb(236, 223, 38);
+      }
+    }
+    .mid {
+      display: flex;
+      height: 45%;
+      background-color: rgb(247, 248, 244);
+      border: {
+        style: solid;
+        width: 5px;
+        color: rgb(236, 223, 38);
+      }
+    }
+    .down {
+      display: flex;
+      height: 45%;
+      background-color: rgb(247, 248, 244);
+      border: {
+        style: solid;
+        width: 5px;
+        color: rgb(236, 223, 38);
+      }
+    }
   }
   .right {
     width: 15%;
