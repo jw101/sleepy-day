@@ -9,7 +9,7 @@ import roomData from '../rooms.json';
 class Chat extends Component {
     componentDidMount() {
         console.log('--msg--');
-        console.log(this.props.msg);
+        console.log((this.props.msg.data));
     }
 
     render() {
