@@ -89,7 +89,7 @@ class App extends Component {
 
     render() {
 
-        this.state.ws.send("");
+        // this.state.ws.send("");
         const {location} = this.props;
         return (
             <div className={styles.App}>

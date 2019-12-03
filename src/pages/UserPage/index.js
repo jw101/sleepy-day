@@ -15,7 +15,7 @@ class User extends Component {
         let ws = this.props.websocket;
         console.log("~~~~~~~~~~" + ws);
 
-        ws.send(JSON.stringify("{}"));
+        // ws.send(JSON.stringify("{}"));
         // this.props.websocket.send("{\"type\":\"login\",\"username\":\"benjamin1\"}");
     }
 
