@@ -6,6 +6,10 @@ import { InputGroup, FormControl, Button, Badge, ButtonToolbar } from 'react-boo
 import { Link, Route, withRouter } from 'react-router-dom';
 
 class Chat extends Component {
+    componentDidMount() {
+        console.log(this.props.msg);
+    }
+
     render() {
         return (
             <div className={styles.wrap}>

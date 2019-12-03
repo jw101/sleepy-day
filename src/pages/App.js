@@ -28,6 +28,26 @@ class App extends Component {
         this.setState({username: newUserName});
     };
 
+    sendMessage = (data) => {
+        const {ws} = this.state; // websocket instance passed as props to the child component.
+        // console.log('ws: ' + ws);
+        try {
+            ws.send(data); // send data to the server
+        } catch (error) {
+            console.log("----------error");
+            console.log(error) // catch error
+            // try {
+            //     ws.send(data); // send data to the server
+            // } catch (error) {
+            //     console.log("----------error");
+            //     console.log(error) // catch error
+            // }
+        }
+        let {msg} = this.props;
+        // console.log('msg: ' + msg);
+        console.log('msg json: ' + msg);
+    };
+
     /**
      * @function connect
      * This function establishes the connect with the websocket and also ensures constant reconnection if connection closes
@@ -105,9 +125,9 @@ class App extends Component {
                     </div>
                 </header>
                 <section className={styles.content}>
-                    <Route path="/" exact component={() => <UserPage ws={this.state.ws} msg={this.state.msg} changeUserName={this.changeUserName.bind(this)}/>}/>
-                    <Route path="/login" exact component={() => <LoginPage ws={this.state.ws} msg={this.state.msg} username={this.state.username}/>}/>
-                    <Route path="/chat" exact component={ChatPage}/>
+                    <Route path="/" exact component={() => <UserPage ws={this.state.ws} msg={this.state.msg} changeUserName={this.changeUserName.bind(this)} sendMessage={this.sendMessage.bind(this)}/>} />
+                    <Route path="/login" exact component={() => <LoginPage ws={this.state.ws} msg={this.state.msg} username={this.state.username} sendMessage={this.sendMessage.bind(this)}/>} />
+                    <Route path="/chat" exact component={() => <ChatPage ws={this.state.ws} msg={this.state.msg} sendMessage={this.sendMessage.bind(this)}/>}/>
                     <Route path="/room" exact component={RoomPage}/>
                     <Route path="/addRoom" exact component={AddRoomPage}/>
                 </section>

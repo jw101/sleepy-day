@@ -20,20 +20,6 @@ class User extends Component {
     //     }));
     // }
 
-    sendMessage = (data) => {
-        const {ws} = this.props; // websocket instance passed as props to the child component.
-        // console.log('ws: ' + ws);
-        try {
-            ws.send(data) // send data to the server
-        } catch (error) {
-            // console.log("----------error");
-            // console.log(error) // catch error
-        }
-        // let {msg} = this.props;
-        // console.log('msg: ' + msg);
-        // console.log('msg json: ' + msg.data);
-    };
-
     render() {
         // console.log(this.state.username);
         // this.sendMessage(JSON.stringify({
