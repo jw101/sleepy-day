@@ -51,7 +51,7 @@ class Chat extends Component {
                         </InputGroup>
                     </header>
                 </div>
-                <div class={styles.right}>
+                <div className={styles.right}>
                     222
                 </div>
             </div>
