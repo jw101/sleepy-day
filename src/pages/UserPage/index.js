@@ -20,6 +20,14 @@ class User extends Component {
     //     }));
     // }
 
+    login = () => {
+        this.props.changeUserName(this.state.username);
+        this.props.sendMessage(JSON.stringify({
+            type: "login",
+            username: this.state.username
+        }));
+    };
+
     render() {
         // console.log(this.state.username);
         // this.sendMessage(JSON.stringify({
@@ -38,7 +46,7 @@ class User extends Component {
                         </Form.Text>
                     </Form.Group>
                     <Link to="/login">
-                        <Button variant="primary" type="submit" onClick={()=>{this.props.changeUserName(this.state.username)}}>
+                        <Button variant="primary" type="submit" onClick={this.login}>
                             Login
                         </Button>
                     </Link>

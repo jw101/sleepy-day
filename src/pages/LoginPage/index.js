@@ -9,7 +9,6 @@ class Login extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            username: this.props.username,
             age: 0,
             location: "Africa",
             school: "Rice University"
@@ -28,7 +27,7 @@ class Login extends Component {
     signUp = () => {
         let data = {
             type: "create_profile",
-            username: this.state.username,
+            username: this.props.username,
             profile: {
                 age: this.state.age,
                 location: this.state.location,
@@ -45,8 +44,7 @@ class Login extends Component {
                 <Form>
                     <Form.Group controlId="formBasicEmail">
                         <Form.Label>Username</Form.Label>
-                        <Form.Control type="email" placeholder={this.state.username}
-                                      onChange={e => this.setState({username: e.target.value})}/>
+                        <Form.Control readOnly defaultValue={this.props.username}/>
                         <Form.Text className="text-muted">
                             We'll never share your email with anyone else.
                         </Form.Text>
