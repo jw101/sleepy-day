@@ -67,7 +67,9 @@ class Chat extends Component {
                         {/* <button> &nbsp; Add Room &nbsp;</button> */}
                     </div>
                     <section className={styles.section}>
-                        111
+                        <section className={styles.message}> Mary to All : Hello, what's up?</section>
+                        <section className={styles.message}>Sammy to Mary : I am fine. I am fine. I am fine. I am fine. I am fine.</section>
+                        <section className={styles.system_info}>System Info : Sammy has left the room.</section>
                     </section>
                     <header className={styles.footer}>
                         <InputGroup className="mb-3">
