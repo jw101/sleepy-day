@@ -103,11 +103,24 @@
     .section {
       height: 90%;
       background-color: rgb(225, 238, 243);
+
       border: {
         style: solid;
         width: 5px;
         color: rgb(156, 219, 238);
       }
+    }
+    .message {
+      margin-left: 20px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .system_info {
+      margin-left: 20px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font: {style: italic;};
+      color: lightcoral;
     }
     .footer {
       height: 6%;
