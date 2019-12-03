@@ -1,6 +1,372 @@
 {
-    "user": "{\"name\":\"benjamin1\",\"password\":\"\",\"profile\":{\"age\":20,\"location\":\"Dallas\",\"school\":\"Rice\"}}",
-    "joinedList": "[{\"name\":\"Houston chatroom\",\"members\":[{\"name\":\"benjamin1\",\"password\":\"\",\"profile\":{\"age\":20,\"location\":\"Dallas\",\"school\":\"Rice\"}},{\"name\":\"benjamin1\",\"password\":\"\",\"profile\":{\"age\":20,\"location\":\"Dallas\",\"school\":\"Rice\"}},{\"name\":\"benjamin1\",\"password\":\"\",\"profile\":{\"age\":20,\"location\":\"Dallas\",\"school\":\"Rice\"}}],\"owner\":{\"name\":\"benjamin1\",\"password\":\"\",\"profile\":{\"age\":20,\"location\":\"Dallas\",\"school\":\"Rice\"}},\"requirement\":{\"minAge\":16,\"maxAge\":27,\"locations\":[\"Dallas\",\"Houston\",\"Irvine\"],\"schools\":[\"Rice\",\"UT-Austin\",\"USC\",\"NEU\"]},\"messages\":[]}]",
-    "availableList": "[{\"name\":\"Houston chatroom\",\"members\":[{\"name\":\"benjamin1\",\"password\":\"\",\"profile\":{\"age\":20,\"location\":\"Dallas\",\"school\":\"Rice\"}},{\"name\":\"benjamin1\",\"password\":\"\",\"profile\":{\"age\":20,\"location\":\"Dallas\",\"school\":\"Rice\"}},{\"name\":\"benjamin1\",\"password\":\"\",\"profile\":{\"age\":20,\"location\":\"Dallas\",\"school\":\"Rice\"}}],\"owner\":{\"name\":\"benjamin1\",\"password\":\"\",\"profile\":{\"age\":20,\"location\":\"Dallas\",\"school\":\"Rice\"}},\"requirement\":{\"minAge\":16,\"maxAge\":27,\"locations\":[\"Dallas\",\"Houston\",\"Irvine\"],\"schools\":[\"Rice\",\"UT-Austin\",\"USC\",\"NEU\"]},\"messages\":[]}]",
-    "userCurrentRoom": "{\"name\":\"Houston chatroom\",\"members\":[{\"name\":\"benjamin1\",\"password\":\"\",\"profile\":{\"age\":20,\"location\":\"Dallas\",\"school\":\"Rice\"}},{\"name\":\"benjamin1\",\"password\":\"\",\"profile\":{\"age\":20,\"location\":\"Dallas\",\"school\":\"Rice\"}},{\"name\":\"benjamin1\",\"password\":\"\",\"profile\":{\"age\":20,\"location\":\"Dallas\",\"school\":\"Rice\"}}],\"owner\":{\"name\":\"benjamin1\",\"password\":\"\",\"profile\":{\"age\":20,\"location\":\"Dallas\",\"school\":\"Rice\"}},\"requirement\":{\"minAge\":16,\"maxAge\":27,\"locations\":[\"Dallas\",\"Houston\",\"Irvine\"],\"schools\":[\"Rice\",\"UT-Austin\",\"USC\",\"NEU\"]},\"messages\":[]}"
+    "isExist": true,
+    "user": {
+        "name": "benjamin1",
+        "password": "",
+        "profile": {
+            "age": 20,
+            "location": "Dallas",
+            "school": "Rice"
+        }
+    },
+    "joinedList": [
+        {
+            "name": "rice chatroom",
+            "members": [
+                {
+                    "name": "benjamin1",
+                    "password": "",
+                    "profile": {
+                        "age": 20,
+                        "location": "Dallas",
+                        "school": "Rice"
+                    }
+                },
+                {
+                    "name": "benjamin1",
+                    "password": "",
+                    "profile": {
+                        "age": 20,
+                        "location": "Dallas",
+                        "school": "Rice"
+                    }
+                }
+            ],
+            "owner": {
+                "name": "benjamin1",
+                "password": "",
+                "profile": {
+                    "age": 20,
+                    "location": "Dallas",
+                    "school": "Rice"
+                }
+            },
+            "requirement": {
+                "minAge": 18,
+                "maxAge": 25,
+                "locations": [
+                    "LA",
+                    "Houston",
+                    "Irvine"
+                ],
+                "schools": [
+                    "Rice",
+                    "UT-Austin",
+                    "MIT"
+                ]
+            },
+            "messages": [
+                {
+                    "content": "hello, how are you?",
+                    "timeStamp": "Dec 2, 2019, 9:13:56 PM",
+                    "sender": "benjamin1",
+                    "receiver": "benjamin2"
+                },
+                {
+                    "content": "Good morning everybody!",
+                    "timeStamp": "Dec 2, 2019, 9:13:56 PM",
+                    "sender": "benjamin1",
+                    "receiver": "all"
+                }
+            ]
+        },
+        {
+            "name": "rice chatroom",
+            "members": [
+                {
+                    "name": "benjamin1",
+                    "password": "",
+                    "profile": {
+                        "age": 20,
+                        "location": "Dallas",
+                        "school": "Rice"
+                    }
+                },
+                {
+                    "name": "benjamin1",
+                    "password": "",
+                    "profile": {
+                        "age": 20,
+                        "location": "Dallas",
+                        "school": "Rice"
+                    }
+                }
+            ],
+            "owner": {
+                "name": "benjamin1",
+                "password": "",
+                "profile": {
+                    "age": 20,
+                    "location": "Dallas",
+                    "school": "Rice"
+                }
+            },
+            "requirement": {
+                "minAge": 18,
+                "maxAge": 25,
+                "locations": [
+                    "LA",
+                    "Houston",
+                    "Irvine"
+                ],
+                "schools": [
+                    "Rice",
+                    "UT-Austin",
+                    "MIT"
+                ]
+            },
+            "messages": [
+                {
+                    "content": "hello, how are you?",
+                    "timeStamp": "Dec 2, 2019, 9:13:56 PM",
+                    "sender": "benjamin1",
+                    "receiver": "benjamin2"
+                },
+                {
+                    "content": "Good morning everybody!",
+                    "timeStamp": "Dec 2, 2019, 9:13:56 PM",
+                    "sender": "benjamin1",
+                    "receiver": "all"
+                }
+            ]
+        },{
+            "name": "rice chatroom",
+            "members": [
+                {
+                    "name": "benjamin1",
+                    "password": "",
+                    "profile": {
+                        "age": 20,
+                        "location": "Dallas",
+                        "school": "Rice"
+                    }
+                },
+                {
+                    "name": "benjamin1",
+                    "password": "",
+                    "profile": {
+                        "age": 20,
+                        "location": "Dallas",
+                        "school": "Rice"
+                    }
+                }
+            ],
+            "owner": {
+                "name": "benjamin1",
+                "password": "",
+                "profile": {
+                    "age": 20,
+                    "location": "Dallas",
+                    "school": "Rice"
+                }
+            },
+            "requirement": {
+                "minAge": 18,
+                "maxAge": 25,
+                "locations": [
+                    "LA",
+                    "Houston",
+                    "Irvine"
+                ],
+                "schools": [
+                    "Rice",
+                    "UT-Austin",
+                    "MIT"
+                ]
+            },
+            "messages": [
+                {
+                    "content": "hello, how are you?",
+                    "timeStamp": "Dec 2, 2019, 9:13:56 PM",
+                    "sender": "benjamin1",
+                    "receiver": "benjamin2"
+                },
+                {
+                    "content": "Good morning everybody!",
+                    "timeStamp": "Dec 2, 2019, 9:13:56 PM",
+                    "sender": "benjamin1",
+                    "receiver": "all"
+                }
+            ]
+        },{
+            "name": "rice chatroom",
+            "members": [
+                {
+                    "name": "benjamin1",
+                    "password": "",
+                    "profile": {
+                        "age": 20,
+                        "location": "Dallas",
+                        "school": "Rice"
+                    }
+                },
+                {
+                    "name": "benjamin1",
+                    "password": "",
+                    "profile": {
+                        "age": 20,
+                        "location": "Dallas",
+                        "school": "Rice"
+                    }
+                }
+            ],
+            "owner": {
+                "name": "benjamin1",
+                "password": "",
+                "profile": {
+                    "age": 20,
+                    "location": "Dallas",
+                    "school": "Rice"
+                }
+            },
+            "requirement": {
+                "minAge": 18,
+                "maxAge": 25,
+                "locations": [
+                    "LA",
+                    "Houston",
+                    "Irvine"
+                ],
+                "schools": [
+                    "Rice",
+                    "UT-Austin",
+                    "MIT"
+                ]
+            },
+            "messages": [
+                {
+                    "content": "hello, how are you?",
+                    "timeStamp": "Dec 2, 2019, 9:13:56 PM",
+                    "sender": "benjamin1",
+                    "receiver": "benjamin2"
+                },
+                {
+                    "content": "Good morning everybody!",
+                    "timeStamp": "Dec 2, 2019, 9:13:56 PM",
+                    "sender": "benjamin1",
+                    "receiver": "all"
+                }
+            ]
+        }
+        
+    ],
+    "availableList": [
+        {
+            "name": "Houston chatroom",
+            "members": [
+                {
+                    "name": "benjamin2",
+                    "password": "",
+                    "profile": {
+                        "age": 20,
+                        "location": "Dallas",
+                        "school": "Rice"
+                    }
+                },
+                {
+                    "name": "benjamin2",
+                    "password": "",
+                    "profile": {
+                        "age": 20,
+                        "location": "Dallas",
+                        "school": "Rice"
+                    }
+                },
+                {
+                    "name": "benjamin2",
+                    "password": "",
+                    "profile": {
+                        "age": 20,
+                        "location": "Dallas",
+                        "school": "Rice"
+                    }
+                }
+            ],
+            "owner": {
+                "name": "benjamin2",
+                "password": "",
+                "profile": {
+                    "age": 20,
+                    "location": "Dallas",
+                    "school": "Rice"
+                }
+            },
+            "requirement": {
+                "minAge": 16,
+                "maxAge": 27,
+                "locations": [
+                    "Dallas",
+                    "Houston",
+                    "Irvine"
+                ],
+                "schools": [
+                    "Rice",
+                    "UT-Austin",
+                    "USC",
+                    "NEU"
+                ]
+            },
+            "messages": []
+        }
+    ],
+    "userCurrentRoom": {
+        "name": "rice chatroom",
+        "members": [
+            {
+                "name": "benjamin1",
+                "password": "",
+                "profile": {
+                    "age": 20,
+                    "location": "Dallas",
+                    "school": "Rice"
+                }
+            },
+            {
+                "name": "benjamin1",
+                "password": "",
+                "profile": {
+                    "age": 20,
+                    "location": "Dallas",
+                    "school": "Rice"
+                }
+            }
+        ],
+        "owner": {
+            "name": "benjamin1",
+            "password": "",
+            "profile": {
+                "age": 20,
+                "location": "Dallas",
+                "school": "Rice"
+            }
+        },
+        "requirement": {
+            "minAge": 18,
+            "maxAge": 25,
+            "locations": [
+                "LA",
+                "Houston",
+                "Irvine"
+            ],
+            "schools": [
+                "Rice",
+                "UT-Austin",
+                "MIT"
+            ]
+        },
+        "messages": [
+            {
+                "content": "hello, how are you?",
+                "timeStamp": "Dec 2, 2019, 9:13:56 PM",
+                "sender": "benjamin1",
+                "receiver": "benjamin2"
+            },
+            {
+                "content": "Good morning everybody!",
+                "timeStamp": "Dec 2, 2019, 9:13:56 PM",
+                "sender": "benjamin1",
+                "receiver": "all"
+            }
+        ]
+    }
 }

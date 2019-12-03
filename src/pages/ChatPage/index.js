@@ -2,11 +2,13 @@
 import React, { Component } from 'react';
 import styles from './chat.module.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { InputGroup, FormControl, Button, Badge, ButtonToolbar } from 'react-bootstrap';
-import { Link, Route, withRouter } from 'react-router-dom';
+import { InputGroup, FormControl, Button, Badge, ButtonToolbar, Card } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import roomData from '../rooms.json';
 
 class Chat extends Component {
     render() {
+        console.log(roomData.joinedList);
         return (
             <div className={styles.wrap}>
                 <div className={styles.left}>
@@ -15,18 +17,31 @@ class Chat extends Component {
                             <Badge variant="secondary">Current Room</Badge>
                         </h5>
                     </section>
-                    <section className={styles.down}>
-                        <h5>
+                    <section className={styles.mid}>
+
+
+                        <h5 className={styles.title}>
                             <Badge variant="secondary">Joined Room</Badge>
                         </h5>
+
+
+                        {roomData.joinedList && roomData.joinedList.map(item =>
+                            <button className={styles.rooms}>
+                                {item.name}
+                            </button>
+                        )}
+
+
+
+
                     </section>
                     <section className={styles.down}>
                         <h5>
                             <Badge variant="secondary">Available Room</Badge>
                         </h5>
+                        <availableRoomList dataSource={roomData.data} />
                     </section>
                 </div>
-
                 <div className={styles.dialog}>
 
                     <div className={styles.topBar}>
