@@ -13,7 +13,7 @@ class Chat extends Component {
     }
 
     render() {
-        console.log(roomData.availableList);
+        // console.log(roomData.userCurrentRoom.members[1].name);
         return (
             <div className={styles.wrap}>
                 <div className={styles.left}>
@@ -22,7 +22,7 @@ class Chat extends Component {
                             <Badge variant="secondary">Current Room</Badge>
                         </h5>
                         <button className={styles.rooms}>
-                            {roomData.userCurrentRoom && roomData.userCurrentRoom.name}
+                            {roomData.userCurrentRoom && roomData.userCurrentRoom}
                         </button>
 
                     </section>
@@ -32,7 +32,7 @@ class Chat extends Component {
                         </h5>
                         {roomData.joinedList && roomData.joinedList.map(item =>
                             <button className={styles.rooms}>
-                                {item.name}
+                                {item}
                             </button>
                         )}
                     </section>
@@ -42,7 +42,7 @@ class Chat extends Component {
                         </h5>
                         {roomData.availableList && roomData.availableList.map(item =>
                             <button className={styles.rooms}>
-                                {item.name}
+                                {item}
                             </button>
                         )}
                     </section>
@@ -67,9 +67,12 @@ class Chat extends Component {
                         {/* <button> &nbsp; Add Room &nbsp;</button> */}
                     </div>
                     <section className={styles.section}>
-                        <section className={styles.message}> Mary to All : Hello, what's up?</section>
+                        {roomData.messageList && roomData.messageList.map(item =>
+                            <section className={styles.message}>{item}</section>
+                        )}
+                        {/* <section className={styles.message}> Mary to All : Hello, what's up?</section>
                         <section className={styles.message}>Sammy to Mary : I am fine. I am fine. I am fine. I am fine. I am fine.</section>
-                        <section className={styles.system_info}>System Info : Sammy has left the room.</section>
+                        <section className={styles.system_info}>System Info : Sammy has left the room.</section> */}
                     </section>
                     <header className={styles.footer}>
                         <InputGroup className="mb-3">
@@ -93,9 +96,11 @@ class Chat extends Component {
                         <h5 className={styles.title}>
                             <Badge variant="secondary">Users in Room</Badge>
                         </h5>
-                        <button className={styles.rooms}>
-                            {roomData.userCurrentRoom && roomData.userCurrentRoom.name}
-                        </button>
+                        {roomData.memberList && roomData.memberList.map(item =>
+                            <button className={styles.rooms}>
+                                {item}
+                            </button>
+                        )}
 
                     </section>
 
