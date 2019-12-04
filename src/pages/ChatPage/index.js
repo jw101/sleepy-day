@@ -3,6 +3,7 @@ import styles from './chat.module.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {InputGroup, FormControl, Button, Badge, ButtonToolbar, Card} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
+import Alert from "react-bootstrap/Alert";
 
 // import JSON.parse(this.props.msg.data) from '../rooms.json';
 
@@ -95,6 +96,14 @@ class Chat extends Component {
                                 this.props.sendMessage(JSON.stringify(data));
                             }}>Leave All Rooms</Button>
                         </ButtonToolbar>
+                        {(this.props.msg != undefined && this.props.msg != null &&
+                            this.props.msg.data != undefined && this.props.msg.data != undefined &&
+                            JSON.parse(this.props.msg.data).newMessageRoom != '') &&
+                            <span className={styles.notice}>
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                Room {JSON.parse(this.props.msg.data).newMessageRoom} has your message!
+                            </span>
+                        }
                         <p>&nbsp;&nbsp;&nbsp;</p>
                         {/* <button> &nbsp; Add Room &nbsp;</button> */}
                     </div>

@@ -1,17 +1,18 @@
 .wrap {
-    display: flex;
-    background-color: rgb(225, 243, 177);
-    justify-content: center;
-    padding: 50px 50px 50px 50px;
-    border: {
-        style: solid;
-        width: 10px;
-        color:rgb(213, 240, 139);
-    }
-    p {
-      margin: 0px 10px;
-      font-size: 14px;
-      color: rgb(244, 245, 241);
-    }
+  display: flex;
+  background-color: rgb(225, 243, 177);
+  justify-content: center;
+  padding: 50px 50px 50px 50px;
+  border: {
+    style: solid;
+    width: 10px;
+    color: rgb(213, 240, 139);
   }
+
+  p {
+    margin: 0px 10px;
+    font-size: 14px;
+    color: rgb(244, 245, 241);
+  }
+}
   
