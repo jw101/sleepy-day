@@ -26,8 +26,8 @@ class User extends Component {
             type: "login",
             username: this.state.username
         }));
-        console.log('--msg--');
-        console.log(JSON.parse(this.props.msg.data));
+        // console.log('--msg--');
+        // console.log(JSON.parse(this.props.msg.data));
     };
 
     render() {
