@@ -15,6 +15,11 @@ class Login extends Component {
         }
     }
 
+    // componentDidMount() {
+    //     console.log('--msg--');
+    //     console.log(JSON.parse(this.props.msg.data));
+    // }
+
     setAge = (ageString) => {
         let age = parseInt(ageString, 10);
         console.log('age: ' + age);
@@ -38,7 +43,8 @@ class Login extends Component {
     };
 
     render() {
-        console.log('state: ' + JSON.stringify(this.state));
+        // console.log('state: ');
+        // console.log(this.state);
         return (
             <div className={styles.wrap}>
                 <Form>

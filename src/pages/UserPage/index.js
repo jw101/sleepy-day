@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import styles from './user.module.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Form, Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import {Form, Button} from 'react-bootstrap';
+import {Link} from 'react-router-dom';
 
 
 class User extends Component {
@@ -26,6 +26,8 @@ class User extends Component {
             type: "login",
             username: this.state.username
         }));
+        console.log('--msg--');
+        console.log(JSON.parse(this.props.msg.data));
     };
 
     render() {
@@ -40,12 +42,13 @@ class User extends Component {
                 <Form>
                     <Form.Group controlId="formBasicEmail">
                         <Form.Label>User name</Form.Label>
-                        <Form.Control type="email" placeholder="Enter your user name" onChange={e => this.setState({ username: e.target.value })} />
+                        <Form.Control type="email" placeholder="Enter your user name"
+                                      onChange={e => this.setState({username: e.target.value})}/>
                         <Form.Text className="text-muted">
                             Enter your user name to login to your account.
                         </Form.Text>
                     </Form.Group>
-                    <Link to="/login">
+                    <Link to={this.props.msg.data == null || this.props.msg.data == undefined ? "#" : "/login"}>
                         <Button variant="primary" type="submit" onClick={this.login}>
                             Login
                         </Button>
