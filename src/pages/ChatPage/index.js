@@ -129,7 +129,16 @@ class Chat extends Component {
                                 }}>Send</Button>
                             </InputGroup.Append>
                             <InputGroup.Append>
-                                <Button variant="outline-secondary">Send to All</Button>
+                                <Button variant="outline-secondary" onClick={() => {
+                                    let data = {
+                                        type: "send_message",
+                                        username: this.props.username,
+                                        receiver: "all",
+                                        content: this.state.content
+                                    };
+                                    // console.log(data);
+                                    this.props.sendMessage(JSON.stringify(data));
+                                }}>Send to All</Button>
                             </InputGroup.Append>
                         </InputGroup>
                     </header>
