@@ -83,7 +83,13 @@ class Chat extends Component {
                                 this.props.sendMessage(JSON.stringify(data));
                             }}>Leave Room</Button>
                             <p>&nbsp;&nbsp;&nbsp;</p>
-                            <Button variant="warning">Leave All Rooms</Button>
+                            <Button variant="warning" onClick={() => {
+                                // let data = {
+                                //     type: "leave_all_room",
+                                //     username: this.props.username
+                                // };
+                                // this.props.sendMessage(JSON.stringify(data));
+                            }}>Leave All Rooms</Button>
                         </ButtonToolbar>
                         <p>&nbsp;&nbsp;&nbsp;</p>
                         {/* <button> &nbsp; Add Room &nbsp;</button> */}
