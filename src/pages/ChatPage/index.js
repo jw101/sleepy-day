@@ -13,38 +13,38 @@ class Chat extends Component {
     }
 
     render() {
-        console.log(roomData.joinedList);
+        console.log(roomData.availableList);
         return (
             <div className={styles.wrap}>
                 <div className={styles.left}>
                     <section className={styles.up}>
-                        <h5>
+                        <h5 className={styles.title}>
                             <Badge variant="secondary">Current Room</Badge>
                         </h5>
+                        <button className={styles.rooms}>
+                            {roomData.userCurrentRoom && roomData.userCurrentRoom.name}
+                        </button>
+
                     </section>
                     <section className={styles.mid}>
-
-
                         <h5 className={styles.title}>
-                            <Badge variant="secondary">Joined Room</Badge>
+                            <Badge variant="secondary">Joined Rooms</Badge>
                         </h5>
-
-
                         {roomData.joinedList && roomData.joinedList.map(item =>
                             <button className={styles.rooms}>
                                 {item.name}
                             </button>
                         )}
-
-
-
-
                     </section>
                     <section className={styles.down}>
-                        <h5>
-                            <Badge variant="secondary">Available Room</Badge>
+                        <h5 className={styles.title}>
+                            <Badge variant="secondary">Available Rooms<br />(click to join)</Badge>
                         </h5>
-                        <availableRoomList dataSource={roomData.data} />
+                        {roomData.availableList && roomData.availableList.map(item =>
+                            <button className={styles.rooms}>
+                                {item.name}
+                            </button>
+                        )}
                     </section>
                 </div>
                 <div className={styles.dialog}>
@@ -88,7 +88,17 @@ class Chat extends Component {
                     </header>
                 </div>
                 <div className={styles.right}>
-                    222
+
+                    <section className={styles.up}>
+                        <h5 className={styles.title}>
+                            <Badge variant="secondary">Users in Room</Badge>
+                        </h5>
+                        <button className={styles.rooms}>
+                            {roomData.userCurrentRoom && roomData.userCurrentRoom.name}
+                        </button>
+
+                    </section>
+
                 </div>
             </div>
         );
