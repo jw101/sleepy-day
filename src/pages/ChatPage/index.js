@@ -9,6 +9,10 @@ import {Link} from 'react-router-dom';
 class Chat extends Component {
     constructor(props) {
         super(props);
+        this.state = {
+            receiver: '',
+            content: ''
+        };
     }
 
     componentDidMount() {
@@ -108,9 +112,21 @@ class Chat extends Component {
                                 placeholder="Input message"
                                 aria-label="Input message"
                                 aria-describedby="basic-addon2"
+                                onChange={(event => {
+                                    this.setState({content: event.target.value})
+                                })}
                             />
                             <InputGroup.Append>
-                                <Button variant="outline-secondary">Send</Button>
+                                <Button variant="outline-secondary" onClick={() => {
+                                    let data = {
+                                        type: "send_message",
+                                        username: this.props.username,
+                                        receiver: this.state.receiver,
+                                        content: this.state.content
+                                    };
+                                    // console.log(data);
+                                    this.props.sendMessage(JSON.stringify(data));
+                                }}>Send</Button>
                             </InputGroup.Append>
                             <InputGroup.Append>
                                 <Button variant="outline-secondary">Send to All</Button>
@@ -125,7 +141,9 @@ class Chat extends Component {
                             <Badge variant="secondary">Users in Room</Badge>
                         </h5>
                         {JSON.parse(this.props.msg.data).memberList && JSON.parse(this.props.msg.data).memberList.map(item =>
-                            <button className={styles.rooms}>
+                            <button className={styles.rooms} onClick={() => {
+                                this.setState({receiver: item})
+                            }}>
                                 {item}
                             </button>
                         )}
