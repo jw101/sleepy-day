@@ -53,7 +53,13 @@ class App extends Component {
      * This function establishes the connect with the websocket and also ensures constant reconnection if connection closes
      */
     connect = () => {
-        let ws = new WebSocket("ws://localhost:4567/chatapp");
+        let ws;
+        if (window.location.toString().includes("localhost")) {
+            ws = new WebSocket("ws://localhost:"+ 4567+"/chatapp");
+        } else {
+            let HOST = window.location.origin.replace(/^http/, 'ws') + "/chatapp"
+            ws = new WebSocket(HOST);
+        }
         let that = this; // cache the this
         let connectInterval;
 
