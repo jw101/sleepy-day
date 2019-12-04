@@ -11,46 +11,62 @@ class AddRoom extends Component {
         return (
             <div className={styles.wrap}>
                 <Form>
-                    <Form.Group controlId="formBasicEmail">
-                        <Form.Label>Roomname</Form.Label>
-                        <Form.Control type="email" placeholder="Enter email" />
+                    <Form.Group controlId="formBasicPassword">
+                        <Form.Label>Room Name</Form.Label>
+                        <Form.Control type="text" placeholder="Age"
+                            onChange={e => this.setAge(e.target.value)} />
                         <Form.Text className="text-muted">
-                            We'll never share your email with anyone else.
-            </Form.Text>
+                    
+                    </Form.Text>
                     </Form.Group>
 
                     <Form.Group controlId="formBasicPassword">
-                        <Form.Label>Password</Form.Label>
-                        <Form.Control type="password" placeholder="Password" />
+                        <Form.Label>Max Age</Form.Label>
+                        <Form.Control type="text" placeholder="Age"
+                            onChange={e => this.setAge(e.target.value)} />
+                        <Form.Text className="text-muted">
+                            We'll never share your age with anyone else.
+                    </Form.Text>
                     </Form.Group>
-                    <Form.Group controlId="formBasicCheckbox">
-                        <Form.Check type="checkbox" label="Check me out" />
+                    
+
+                    <Form.Group controlId="formBasicPassword">
+                        <Form.Label>Min Age</Form.Label>
+                        <Form.Control type="text" placeholder="Age"
+                            onChange={e => this.setAge(e.target.value)} />
+                        <Form.Text className="text-muted">
+                            We'll never share your age with anyone else.
+                    </Form.Text>
                     </Form.Group>
+                   
 
                     <Form.Group controlId="exampleForm.ControlSelect1">
-                        <Form.Label>Region</Form.Label>
-                        <Form.Control as="select">
-                            <option>South Aferica</option>
-                            <option>Acian</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
+                        <Form.Label>Location</Form.Label>
+                        <Form.Control as="select" onChange={e => this.setState({ location: e.target.value })}>
+                            <option>Africa</option>
+                            <option>Asia</option>
+                            <option>North America</option>
+                            <option>South America</option>
+                            <option>Europe</option>
                         </Form.Control>
                     </Form.Group>
                     <Form.Group controlId="exampleForm.ControlSelect2">
-                        <Form.Label>University</Form.Label>
-                        <Form.Control as="select">
+                        <Form.Label>School</Form.Label>
+                        <Form.Control as="select" onChange={e => this.setState({ school: e.target.value })}>
                             <option>Rice University</option>
                             <option>USC</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
+                            <option>MIT</option>
+                            <option>Wuhan</option>
+                            <option>Nanjing</option>
                         </Form.Control>
                     </Form.Group>
-
-                    <Button variant="primary" type="submit">
-                        <Link to="/chat"><p>Sign up to login</p></Link>
+                    <Link to="/chat">
+                        <Button variant="primary" type="submit" onClick={() => {
+                            this.signUp();
+                        }}>
+                            Sign up to login
                     </Button>
+                    </Link>
                 </Form>
             </div>
         );

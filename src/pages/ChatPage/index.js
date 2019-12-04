@@ -4,7 +4,7 @@ import styles from './chat.module.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { InputGroup, FormControl, Button, Badge, ButtonToolbar, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import roomData from '../rooms.json';
+// import JSON.parse(this.props.msg.data) from '../rooms.json';
 
 class Chat extends Component {
     componentDidMount() {
@@ -13,7 +13,7 @@ class Chat extends Component {
     }
 
     render() {
-        // console.log(roomData.userCurrentRoom.members[1].name);
+        // console.log(JSON.parse(this.props.msg.data).userCurrentRoom.members[1].name);
         return (
             <div className={styles.wrap}>
                 <div className={styles.left}>
@@ -22,7 +22,7 @@ class Chat extends Component {
                             <Badge variant="secondary">Current Room</Badge>
                         </h5>
                         <button className={styles.rooms}>
-                            {roomData.userCurrentRoom && roomData.userCurrentRoom}
+                            {JSON.parse(this.props.msg.data).userCurrentRoom && JSON.parse(this.props.msg.data).userCurrentRoom}
                         </button>
 
                     </section>
@@ -30,7 +30,7 @@ class Chat extends Component {
                         <h5 className={styles.title}>
                             <Badge variant="secondary">Joined Rooms</Badge>
                         </h5>
-                        {roomData.joinedList && roomData.joinedList.map(item =>
+                        {JSON.parse(this.props.msg.data).joinedList && JSON.parse(this.props.msg.data).joinedList.map(item =>
                             <button className={styles.rooms}>
                                 {item}
                             </button>
@@ -40,7 +40,7 @@ class Chat extends Component {
                         <h5 className={styles.title}>
                             <Badge variant="secondary">Available Rooms<br />(click to join)</Badge>
                         </h5>
-                        {roomData.availableList && roomData.availableList.map(item =>
+                        {JSON.parse(this.props.msg.data).availableList && JSON.parse(this.props.msg.data).availableList.map(item =>
                             <button className={styles.rooms}>
                                 {item}
                             </button>
@@ -67,7 +67,7 @@ class Chat extends Component {
                         {/* <button> &nbsp; Add Room &nbsp;</button> */}
                     </div>
                     <section className={styles.section}>
-                        {roomData.messageList && roomData.messageList.map(item =>
+                        {JSON.parse(this.props.msg.data).messageList && JSON.parse(this.props.msg.data).messageList.map(item =>
                             <section className={styles.message}>{item}</section>
                         )}
                         {/* <section className={styles.message}> Mary to All : Hello, what's up?</section>
@@ -96,7 +96,7 @@ class Chat extends Component {
                         <h5 className={styles.title}>
                             <Badge variant="secondary">Users in Room</Badge>
                         </h5>
-                        {roomData.memberList && roomData.memberList.map(item =>
+                        {JSON.parse(this.props.msg.data).memberList && JSON.parse(this.props.msg.data).memberList.map(item =>
                             <button className={styles.rooms}>
                                 {item}
                             </button>
