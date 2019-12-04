@@ -7,6 +7,10 @@ import { Link } from 'react-router-dom';
 // import JSON.parse(this.props.msg.data) from '../rooms.json';
 
 class Chat extends Component {
+    constructor(props) {
+        super(props);
+    }
+
     componentDidMount() {
         console.log('--msg--');
         console.log(JSON.parse(this.props.msg.data));
