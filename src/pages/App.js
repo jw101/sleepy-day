@@ -127,7 +127,7 @@ class App extends Component {
                 <section className={styles.content}>
                     <Route path="/" exact component={() => <UserPage ws={this.state.ws} msg={this.state.msg} changeUserName={this.changeUserName.bind(this)} sendMessage={this.sendMessage.bind(this)}/>} />
                     <Route path="/login" exact component={() => <LoginPage ws={this.state.ws} msg={this.state.msg} username={this.state.username} sendMessage={this.sendMessage.bind(this)}/>} />
-                    <Route path="/chat" exact component={() => <ChatPage ws={this.state.ws} msg={this.state.msg} sendMessage={this.sendMessage.bind(this)}/>}/>
+                    <Route path="/chat" exact component={() => <ChatPage ws={this.state.ws} msg={this.state.msg} username={this.state.username} sendMessage={this.sendMessage.bind(this)}/>}/>
                     <Route path="/room" exact component={RoomPage}/>
                     <Route path="/addRoom" exact component={() => <AddRoomPage ws={this.state.ws} msg={this.state.msg} username={this.state.username} sendMessage={this.sendMessage.bind(this)}/>}/>
                 </section>

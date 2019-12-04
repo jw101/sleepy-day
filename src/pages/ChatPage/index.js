@@ -1,9 +1,9 @@
-
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import styles from './chat.module.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { InputGroup, FormControl, Button, Badge, ButtonToolbar, Card } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import {InputGroup, FormControl, Button, Badge, ButtonToolbar, Card} from 'react-bootstrap';
+import {Link} from 'react-router-dom';
+
 // import JSON.parse(this.props.msg.data) from '../rooms.json';
 
 class Chat extends Component {
@@ -35,17 +35,31 @@ class Chat extends Component {
                             <Badge variant="secondary">Joined Rooms</Badge>
                         </h5>
                         {JSON.parse(this.props.msg.data).joinedList && JSON.parse(this.props.msg.data).joinedList.map(item =>
-                            <button className={styles.rooms}>
+                            <button className={styles.rooms} onClick={() => {
+                                let data = {
+                                    type: "change_room",
+                                    username: this.props.username,
+                                    roomName: item
+                                };
+                                this.props.sendMessage(JSON.stringify(data));
+                            }}>
                                 {item}
                             </button>
                         )}
                     </section>
                     <section className={styles.down}>
                         <h5 className={styles.title}>
-                            <Badge variant="secondary">Available Rooms<br />(click to join)</Badge>
+                            <Badge variant="secondary">Available Rooms<br/>(click to join)</Badge>
                         </h5>
                         {JSON.parse(this.props.msg.data).availableList && JSON.parse(this.props.msg.data).availableList.map(item =>
-                            <button className={styles.rooms}>
+                            <button className={styles.rooms} onClick={() => {
+                                let data = {
+                                    type: "enter_room",
+                                    username: this.props.username,
+                                    roomName: item
+                                };
+                                this.props.sendMessage(JSON.stringify(data));
+                            }}>
                                 {item}
                             </button>
                         )}
@@ -61,7 +75,13 @@ class Chat extends Component {
                         <ButtonToolbar>
                             <Link to="/addRoom"><Button variant="primary">Add Room</Button></Link>
                             <p>&nbsp;&nbsp;&nbsp;</p>
-                            <Button variant="secondary">Leave Room</Button>
+                            <Button variant="secondary" onClick={() => {
+                                let data = {
+                                    type: "leave_room",
+                                    username: this.props.username
+                                };
+                                this.props.sendMessage(JSON.stringify(data));
+                            }}>Leave Room</Button>
                             <p>&nbsp;&nbsp;&nbsp;</p>
                             <Button variant="warning">Leave All Rooms</Button>
                         </ButtonToolbar>
