@@ -13,7 +13,7 @@ class AddRoom extends Component {
                 <Form>
                     <Form.Group controlId="formBasicPassword">
                         <Form.Label>Room Name</Form.Label>
-                        <Form.Control type="text" placeholder="Age"
+                        <Form.Control type="text" placeholder="Room Name"
                             onChange={e => this.setAge(e.target.value)} />
                         <Form.Text className="text-muted">
                     
@@ -42,7 +42,7 @@ class AddRoom extends Component {
 
                     <Form.Group controlId="exampleForm.ControlSelect1">
                         <Form.Label>Location</Form.Label>
-                        <Form.Control as="select" onChange={e => this.setState({ location: e.target.value })}>
+                        <Form.Control as="select" multiple={true} onChange={e => this.setState({ location: e.target.value })}>
                             <option>Africa</option>
                             <option>Asia</option>
                             <option>North America</option>
@@ -52,7 +52,7 @@ class AddRoom extends Component {
                     </Form.Group>
                     <Form.Group controlId="exampleForm.ControlSelect2">
                         <Form.Label>School</Form.Label>
-                        <Form.Control as="select" onChange={e => this.setState({ school: e.target.value })}>
+                        <Form.Control as="select" multiple={true} onChange={e => this.setState({ school: e.target.value })}>
                             <option>Rice University</option>
                             <option>USC</option>
                             <option>MIT</option>
