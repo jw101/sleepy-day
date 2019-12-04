@@ -26,6 +26,16 @@ class AddRoom extends Component {
         return age;
     };
 
+    option2array = (options) => {
+        let value = [];
+        for (let i = 0, l = options.length; i < l; i++) {
+            if (options[i].selected) {
+                value.push(options[i].value);
+            }
+        }
+        return value;
+    };
+
     render() {
         return (
             <div className={styles.wrap}>
@@ -62,7 +72,7 @@ class AddRoom extends Component {
                     <Form.Group controlId="exampleForm.ControlSelect1">
                         <Form.Label>Location</Form.Label>
                         <Form.Control as="select" multiple={true}
-                                      onChange={e => this.setState({locations: [...this.state.locations, e.target.value]})}>
+                                      onChange={e => this.setState({locations: this.option2array(e.target.options)})}>
                             <option>Africa</option>
                             <option>Asia</option>
                             <option>North America</option>
@@ -73,7 +83,7 @@ class AddRoom extends Component {
                     <Form.Group controlId="exampleForm.ControlSelect2">
                         <Form.Label>School</Form.Label>
                         <Form.Control as="select" multiple={true}
-                                      onChange={e => this.setState({schools: [...this.state.schools, e.target.value]})}>
+                                      onChange={e => this.setState({schools: this.option2array(e.target.options)})}>
                             <option>Rice University</option>
                             <option>USC</option>
                             <option>MIT</option>
