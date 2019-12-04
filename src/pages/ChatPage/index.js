@@ -38,7 +38,7 @@ class Chat extends Component {
                     </section>
                     <section className={styles.down}>
                         <h5 className={styles.title}>
-                            <Badge variant="secondary">Available Rooms<br/>(click to join)</Badge>
+                            <Badge variant="secondary">Available Rooms<br />(click to join)</Badge>
                         </h5>
                         {roomData.availableList && roomData.availableList.map(item =>
                             <button className={styles.rooms}>
@@ -88,7 +88,17 @@ class Chat extends Component {
                     </header>
                 </div>
                 <div className={styles.right}>
-                    222
+
+                    <section className={styles.up}>
+                        <h5 className={styles.title}>
+                            <Badge variant="secondary">Users in Room</Badge>
+                        </h5>
+                        <button className={styles.rooms}>
+                            {roomData.userCurrentRoom && roomData.userCurrentRoom.name}
+                        </button>
+
+                    </section>
+
                 </div>
             </div>
         );

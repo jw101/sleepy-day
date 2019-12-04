@@ -370,7 +370,7 @@
         "name": "current chatroom",
         "members": [
             {
-                "name": "benjamin1",
+                "name": "member1",
                 "password": "",
                 "profile": {
                     "age": 20,
@@ -379,7 +379,7 @@
                 }
             },
             {
-                "name": "benjamin1",
+                "name": "member2",
                 "password": "",
                 "profile": {
                     "age": 20,
