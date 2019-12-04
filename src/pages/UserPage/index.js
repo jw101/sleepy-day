@@ -13,8 +13,8 @@ class User extends Component {
         }
     }
 
-    // componentDidMount(prevProps, prevState, snapshot) {
-    //     this.sendMessage(JSON.stringify({
+    // componentDidMount() {
+    //     this.props.sendMessage(JSON.stringify({
     //         type: "login",
     //         username: "benjamin1"
     //     }));
@@ -48,7 +48,7 @@ class User extends Component {
                             Enter your user name to login to your account.
                         </Form.Text>
                     </Form.Group>
-                    <Link to={this.props.msg.data == null || this.props.msg.data == undefined ? "#" : "/login"}>
+                    <Link to={this.props.msg.data == null || this.props.msg.data == undefined ? "/login" : "/login"}>
                         <Button variant="primary" type="submit" onClick={this.login}>
                             Login
                         </Button>
