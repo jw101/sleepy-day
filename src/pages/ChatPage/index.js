@@ -61,11 +61,9 @@ class Chat extends Component {
                         <ButtonToolbar>
                             <Link to="/addRoom"><Button variant="primary">Add Room</Button></Link>
                             <p>&nbsp;&nbsp;&nbsp;</p>
-                            <Button variant="secondary">Delete Room</Button>
+                            <Button variant="secondary">Leave Room</Button>
                             <p>&nbsp;&nbsp;&nbsp;</p>
-                            <Button variant="warning">Add friend</Button>
-                            <p>&nbsp;&nbsp;&nbsp;</p>
-                            <Button variant="info">Edit name</Button>
+                            <Button variant="warning">Leave All Rooms</Button>
                         </ButtonToolbar>
                         <p>&nbsp;&nbsp;&nbsp;</p>
                         {/* <button> &nbsp; Add Room &nbsp;</button> */}
